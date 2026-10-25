@@ -1,0 +1,22 @@
+
+# Maven build files
+**/target/
+
+# Eclipse / Spring Tool Suite
+**/.settings/
+**/.classpath
+**/.project
+.metadata/
+
+# IntelliJ / VS Code
+.idea/
+.vscode/
+
+# Environment files and secrets
+.env
+**/.env
+**/application-local.properties
+**/application-secret.properties
+
+# Log files
+*.log
