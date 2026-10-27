@@ -124,3 +124,55 @@ HTTP 404 Not Found.
 - Global exception handling
 - Swagger API documentation
 - Independent MySQL databases
+
+
+## Database Integration
+
+Both microservices use separate MySQL databases.
+
+### Employee Service
+- Database: employee_service_db
+- Port: 8081
+- Spring Data JPA and Hibernate
+- Employee CRUD operations
+- Department validation using OpenFeign
+
+### Department Service
+- Database: department_service_db
+- Port: 8082
+- Spring Data JPA and Hibernate
+- Department CRUD operations
+- Internal API for Employee Service
+
+## API Testing Using Postman
+
+The following operations were tested successfully:
+
+### Department Service
+- Create Department - POST
+- Get All Departments - GET
+- Update Department - POST with ID
+- Delete Department - DELETE
+
+### Employee Service
+- Create Employee - POST
+- Get All Employees - GET
+- Update Employee - PUT
+- Delete Employee - DELETE
+
+### Additional Testing
+- Invalid department ID validation
+- Eureka service registration
+- OpenFeign communication
+- MySQL data persistence
+- Data retrieval after application restart
+
+## How to Run
+
+1. Start MySQL Server.
+2. Create employee_service_db and department_service_db.
+3. Configure the DB_PASSWORD environment variable.
+4. Start Eureka Server on port 8761.
+5. Start Department Service on port 8082.
+6. Start Employee Service on port 8081.
+7. Test the APIs using Postman or Swagger UI.
