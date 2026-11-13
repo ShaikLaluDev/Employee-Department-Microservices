@@ -1,22 +1,18 @@
-
 # Maven build files
 **/target/
 
-# Eclipse / Spring Tool Suite
-**/.settings/
-**/.classpath
-**/.project
-.metadata/
-
-# IntelliJ / VS Code
+# IDE files
 .idea/
 .vscode/
+*.iml
+
+# Logs
+*.log
 
 # Environment files and secrets
 .env
-**/.env
-**/application-local.properties
-**/application-secret.properties
+application-local.properties
 
-# Log files
-*.log
+# OS files
+.DS_Store
+Thumbs.db
